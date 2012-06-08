@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/buttonErlangBActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/button_erlangbactivity_text" />
+
+    <Button
+        android:id="@+id/buttonErlangActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonErlangBActivity"
+        android:layout_centerHorizontal="true"
+        android:text="@string/button_erlangactivity_text" />
+
+    <Button
+        android:id="@+id/buttonErlangCActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonErlangBActivity"
+        android:layout_centerHorizontal="true"
+        android:text="@string/button_erlangcactivity_text" />
+
+</RelativeLayout>

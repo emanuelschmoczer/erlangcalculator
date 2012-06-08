@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, ErlangCalculatorActivity!</string>
+    <string name="app_name">ErlangCalculator</string>
+    <string name="button_erlangbactivity_text">Erlang B Calculator</string>
+    <string name="button_erlangactivity_text">Erlang Calculator</string>
+    <string name="button_erlangcactivity_text">Erlang C Calculator</string>
+
+</resources>
