@@ -18,7 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ErlangActivity"></activity>
+        <activity android:name=".ErlangActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
     </application>
 
 </manifest>
