@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ErlangActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
-        <activity android:name=".ErlangBActivity" android:theme="@android:style/Theme.Black.NoTitleBar"></activity>
+        <activity android:name=".ErlangBActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <activity android:name=".ErlangCActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
     </application>
 
 </manifest>
