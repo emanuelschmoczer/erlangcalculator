@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="hello">Hello World, ErlangCalculatorActivity!</string>
     <string name="app_name">ErlangCalculator</string>
     <string name="button_erlangbactivity_text">Erlang B Calculator</string>
     <string name="button_erlangactivity_text">Erlang Calculator</string>
     <string name="button_erlangcactivity_text">Erlang C Calculator</string>
+    <string name="textview_erlangcalls_text">Calls:</string>
+    <string name="erlang_text">Erlang</string>
+    <string name="erlangb_text">Erlang B</string>
+    <string name="erlangc_text">Erlang C</string>
 
 </resources>
