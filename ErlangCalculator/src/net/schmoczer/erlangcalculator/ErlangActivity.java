@@ -16,7 +16,6 @@ public class ErlangActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.erlang);
 
@@ -24,6 +23,7 @@ public class ErlangActivity extends Activity {
         editTextAvgCallTime = (EditText) findViewById(R.id.editTextAvgCallTime);
         editTextObservationPeriod = (EditText) findViewById(R.id.editTextObservationPeriod);
         editTextErlang = (EditText) findViewById(R.id.editTextErlErlang);
+        editTextErlang.setEnabled(false);
         Button buttonCalculate = (Button) findViewById(R.id.buttonErlCalculate);
 
         buttonCalculate.setOnClickListener(new OnClickListener() {
@@ -41,6 +41,8 @@ public class ErlangActivity extends Activity {
                     if (calls > 0 && avgCallTime > 0 && observationPeriod > 0) {
                         double erlang = calls * avgCallTime / observationPeriod;
                         editTextErlang.setText(String.valueOf(erlang));
+                    } else {
+                        Toast.makeText(ErlangActivity.this, "TODO", Toast.LENGTH_LONG).show();// TODO
                     }
                 } else {
                     Toast.makeText(ErlangActivity.this, "TODO", Toast.LENGTH_LONG).show();// TODO
@@ -48,5 +50,11 @@ public class ErlangActivity extends Activity {
 
             }
         });
+        // TODO: reset button
+    }
+
+    @Override
+    protected void onPause() {
+        // TODO
     }
 }
