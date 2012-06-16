@@ -4,9 +4,17 @@
     <string name="button_erlangbactivity_text">Erlang B Calculator</string>
     <string name="button_erlangactivity_text">Erlang Calculator</string>
     <string name="button_erlangcactivity_text">Erlang C Calculator</string>
-    <string name="textview_erlangcalls_text">Calls:</string>
+    <string name="textview_erl_calls_text">Calls:</string>
     <string name="erlang_text">Erlang</string>
     <string name="erlangb_text">Erlang B</string>
     <string name="erlangc_text">Erlang C</string>
+    <string name="textview_erl_avgcalltime_text">Average call holding time (sec.):</string>
+    <string name="textview_erl_observationperiod_text">Observation period (in seconds):</string>
+    <string name="textview_erlang_text">Erlang:</string>
+    <string name="button_calculate_text">Calculate</string>
+    <string name="textview_curcuits_text">Curcuits:</string>
+    <string name="textview_b_blockingprobability_text">Blocking probability:</string>
+    <string name="textview_c_callagents_text">Call centre agents:</string>
+    <string name="textview_c_probabilty_text">Waiting probability:</string>
 
 </resources>
