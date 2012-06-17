@@ -16,5 +16,7 @@
     <string name="textview_b_blockingprobability_text">Blocking probability:</string>
     <string name="textview_c_callagents_text">Call centre agents:</string>
     <string name="textview_c_probabilty_text">Waiting probability:</string>
+    <string name="error_nozero">Values muste be over zero!</string>
+    <string name="error_nonull">All fields must have a valid value.</string>
 
 </resources>
