@@ -3,6 +3,9 @@ package net.schmoczer.erlangcalculator;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TabHost;
 
 public class ErlangCalculatorActivity extends TabActivity {
@@ -43,5 +46,22 @@ public class ErlangCalculatorActivity extends TabActivity {
 
         tabHost.setCurrentTab(0);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onMenuItemSelected(int featureId, MenuItem item) {
+//        super.onMenuItemSelected(featureId, item);
+        if (item.getItemId() == R.id.about_menuitem) {
+            //TODO: do something
+        }
+        return true;
     }
 }
