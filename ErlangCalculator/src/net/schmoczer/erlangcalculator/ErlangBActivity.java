@@ -22,6 +22,7 @@ public class ErlangBActivity extends Activity {
         editTextErlang = (EditText) findViewById(R.id.editTextBErlang);
         editTextCircuits = (EditText) findViewById(R.id.editTextBCurcuits);
         editTextProbability = (EditText) findViewById(R.id.editTextBProbability);
+        editTextProbability.setEnabled(false);
         Button buttonCalculate = (Button) findViewById(R.id.buttonBCalculate);
 
         buttonCalculate.setOnClickListener(new OnClickListener() {
@@ -36,10 +37,14 @@ public class ErlangBActivity extends Activity {
                         double pb = calculateBlockingProbability(erlang, circuits);
                         editTextProbability.setText(String.valueOf(pb));
                     } else {
-                        Toast.makeText(ErlangBActivity.this, "TODO", Toast.LENGTH_LONG).show();// TODO
+                        Toast.makeText(ErlangBActivity.this,
+                                getResources().getString(R.string.error_nozero), Toast.LENGTH_LONG)
+                                .show();
                     }
                 } else {
-                    Toast.makeText(ErlangBActivity.this, "TODO", Toast.LENGTH_LONG).show();// TODO
+                    Toast.makeText(ErlangBActivity.this,
+                            getResources().getString(R.string.error_nonull), Toast.LENGTH_LONG)
+                            .show();
                 }
 
             }
