@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class ErlangCActivity extends Activity {
     private EditText editTextErlang;
@@ -21,6 +22,7 @@ public class ErlangCActivity extends Activity {
         editTextErlang = (EditText) findViewById(R.id.editTextCErlang);
         editTextAgents = (EditText) findViewById(R.id.editTextCCallAgents);
         editTextProbability = (EditText) findViewById(R.id.editTextCProbability);
+        editTextProbability.setEnabled(false);
 
         Button buttonCalculate = (Button) findViewById(R.id.buttonCCalculate);
 
@@ -35,7 +37,15 @@ public class ErlangCActivity extends Activity {
                     if (erlang > 0 && agents > 0) {
                         double pw = calculateWaitingProbability(erlang, agents);
                         editTextProbability.setText(String.valueOf(pw));
+                    } else {
+                        Toast.makeText(ErlangCActivity.this,
+                                getResources().getString(R.string.error_nozero), Toast.LENGTH_LONG)
+                                .show();
                     }
+                } else {
+                    Toast.makeText(ErlangCActivity.this,
+                            getResources().getString(R.string.error_nonull), Toast.LENGTH_LONG)
+                            .show();
                 }
 
             }
@@ -43,7 +53,8 @@ public class ErlangCActivity extends Activity {
     }
 
     private double calculateWaitingProbability(double erlang, double agents) {
-        double invertedPw = erlang / agents + (1 - erlang / agents) / calculateBlockingProbability(erlang, agents);
+        double invertedPw = erlang / agents + (1 - erlang / agents)
+                / calculateBlockingProbability(erlang, agents);
         return 1 / invertedPw;
     }
 
