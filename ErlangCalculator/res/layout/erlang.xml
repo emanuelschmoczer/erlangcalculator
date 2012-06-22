@@ -41,6 +41,21 @@
             android:inputType="number" />
 
         <TextView
+            android:id="@+id/textViewWrapUpTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/textview_erl_wrapuptime_text"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editTextWrapUpTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="@string/zero" />
+
+        <TextView
             android:id="@+id/textViewObservationPeriod"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
