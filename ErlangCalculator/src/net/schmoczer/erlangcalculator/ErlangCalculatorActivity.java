@@ -1,6 +1,30 @@
+/*
+    ErlangCalculator, a erlang calculator for android.
+    Copyright (C) 2012  Emanuel Schmoczer <emanuel.schmoczer@gmail.com>
+
+    This file is part of ErlangCalculator.
+
+    ErlangCalculator is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    ErlangCalculator is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with ErlangCalculator.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package net.schmoczer.erlangcalculator;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.TabActivity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,7 +32,14 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TabHost;
 
+/**
+ * 
+ * @author Emanuel Schmoczer
+ * 
+ */
 public class ErlangCalculatorActivity extends TabActivity {
+    private static final int ABOUT = 1;
+
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,11 +88,27 @@ public class ErlangCalculatorActivity extends TabActivity {
     }
 
     @Override
-    public boolean onMenuItemSelected(int featureId, MenuItem item) {
-//        super.onMenuItemSelected(featureId, item);
+    public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.about_menuitem) {
-            //TODO: do something
+            this.showDialog(ABOUT);
         }
         return true;
+    }
+
+    @Override
+    protected Dialog onCreateDialog(int id) {
+        Dialog dialog = null;
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(getResources().getString(R.string.dialog_about_text)).setPositiveButton(
+                R.string.ok, new OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+
+                    }
+                });
+        dialog = builder.create();
+        return dialog;
     }
 }

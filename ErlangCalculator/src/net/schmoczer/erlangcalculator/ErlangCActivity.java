@@ -1,3 +1,23 @@
+/*
+    ErlangCalculator, a erlang calculator for android.
+    Copyright (C) 2012  Emanuel Schmoczer <emanuel.schmoczer@gmail.com>
+
+    This file is part of ErlangCalculator.
+
+    ErlangCalculator is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    ErlangCalculator is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with ErlangCalculator.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package net.schmoczer.erlangcalculator;
 
 import android.app.Activity;
@@ -8,6 +28,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * 
+ * @author Emanuel Schmoczer
+ * 
+ */
 public class ErlangCActivity extends Activity {
     private EditText editTextErlang;
     private EditText editTextAgents;
