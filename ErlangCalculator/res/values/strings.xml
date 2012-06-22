@@ -16,7 +16,11 @@
     <string name="textview_b_blockingprobability_text">Blocking probability:</string>
     <string name="textview_c_callagents_text">Call centre agents:</string>
     <string name="textview_c_probabilty_text">Waiting probability:</string>
-    <string name="error_nozero">Values muste be over zero!</string>
+    <string name="error_nozero">Values muste be over zero (except for the wrap-up time)!</string>
     <string name="error_nonull">All fields must have a valid value.</string>
+    <string name="textview_erl_wrapuptime_text">Average wrap-up time (sec.):</string>
+    <string name="zero">0</string>
+    <string name="ok">Ok</string>
+    <string name="dialog_about_text">Thank you for using the ErlangCalculator. The ErlangCalculator was created by Emanuel Schmoczer in line with the Telecommunications course of the HTL Spengergasse.</string>
 
 </resources>
